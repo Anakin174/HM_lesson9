@@ -13,6 +13,7 @@
     version: master
 
 - name: Build java app
-  shell: mvn package
-  args:
-    chdir: "/work"
+  command: mvn -f /work/pom.xml clean package
+  #shell: mvn package
+  #args:
+  #  chdir: "/work"
