@@ -10,6 +10,8 @@
   synchronize:
     src: "/work/target/hello-1.0.war"
     dest: "{{ dest_folder }}"
-  delegate_to: build
+  delegate_to: "{{ item }}"
+  with_items:
+    - {{ groups.prod }}
   notify:
     - restart tomcat
