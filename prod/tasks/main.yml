@@ -12,6 +12,6 @@
     dest: "{{ dest_folder }}"
   delegate_to: "{{ item }}"
   with_items:
-    - groups.prod
+    - groups[prod]
   notify:
     - restart tomcat
