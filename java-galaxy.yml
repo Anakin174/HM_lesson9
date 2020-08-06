@@ -7,3 +7,9 @@
   roles:
     - build
 
+- name: Configuration production node
+  hosts: prod
+  become: yes
+
+  roles:
+    - prod
