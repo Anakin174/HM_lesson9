@@ -2,3 +2,4 @@
 # defaults file for prod
 dest_folder: /var/lib/tomcat8/webapps/
 build: 84.201.138.247
+#^^^you ip build machine^^^
