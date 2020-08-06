@@ -14,6 +14,3 @@
 
 - name: Build java app
   command: mvn -f /work/pom.xml clean package
-  #shell: mvn package
-  #args:
-  #  chdir: "/work"
