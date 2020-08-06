@@ -1,2 +1,9 @@
 ---
 
+- name: Configuration build node
+  hosts: build
+  become: yes
+
+  roles:
+    - build
+
