@@ -9,10 +9,10 @@
 - name: Clone git repo
   git:
     repo: "https://github.com/boxfuse/boxfuse-sample-java-war-hello.git"
-    dest: "/files"
+    dest: "/work"
     version: master
 
 - name: Build java app
   shell: mvn package
   args:
-    chdir: "/files"
+    chdir: "/work"

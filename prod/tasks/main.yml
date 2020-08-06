@@ -1,2 +1,15 @@
 ---
 # tasks file for prod
+- name: install packages
+  apt: name={{ item }} state=present
+  with_items:
+    - defauld-jdk
+    - tomcat8
+
+- name: Copy .war-file
+  synchronize:
+    src: "/files/target/hello-1.0.war"
+    dest: "{{ dest_folder }}"
+  delegate_to: build
+  notify:
+    - restart tomcat
